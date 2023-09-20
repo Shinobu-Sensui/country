@@ -1,0 +1,84 @@
+@font-face {
+  font-family: "font-1";
+  src: url(../assets/fonts/JosefinSans-Medium.ttf);
+}
+
+$font-1: "font-1", sans-serif;
+
+$color-1: #61dafb;
+$color-2: salmon;
+$color-3: #282c34;
+$white: rgb(243, 243, 243);
+
+@mixin verticalCenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+#root {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+body {
+  font-family: $font-1;
+  // @include verticalCenter;
+}
+
+
+li {
+  list-style-type: none;
+  display: flex;
+}
+
+.radio-container {
+  width:100%;
+  display: flex;
+  border: solid 1px rgba(255, 255, 255, 0.302);
+  color:white;
+  justify-content: center;
+  margin-bottom:20px;
+  align-items: center;
+}
+
+.stopSearch {
+  background-color: transparent;
+  border: solid 1px rgba(255, 255, 255, 0.302);
+  color:white;
+  padding:10px;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+.stopSearch::hover {
+  background-color: white;
+  color:black;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 1000px;
+}
+
+@media(max-width:700px) {
+  .container {
+    max-width:400px;
+    font-size:14px;
+    padding:0;
+  }
+
+  ul input {
+    display: none;
+  }
+}
